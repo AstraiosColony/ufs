@@ -1,7 +1,6 @@
 <?php
 $page_title = "Rank Marks ";
-include"load.php";
-
+include"includes/load.php";
 
 ?>
 
