@@ -18,5 +18,5 @@ $stmt->execute();
 $stmt->close();
 $db->close();
 
-header('Location: https://orbital.omega-grid.org');
+header('Location: $return_to');
 ?>
