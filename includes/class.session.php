@@ -6,7 +6,7 @@
    * 
    * 
    * @package    Orbital
-   * @author     SS Pathfinder
+   * @author     Hollow Omnicron <hollow@omega-grid.org>
    */
 
 class Session

@@ -3,7 +3,6 @@
 // Configuration settings
 header( 'Content-type: text/html; charset=utf-8' );
 include( "config.php" );
-include( "functions.php" );
 mysqli_set_charset( $db,"utf8" );
 
 $DEBUG = $_POST['debug'];

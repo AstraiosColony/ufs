@@ -2,6 +2,7 @@
 $page_title = "Rank Marks ";
 include"includes/load.php";
 
+
 ?>
 
 

@@ -1,30 +1,3 @@
-/**
-* For the brave souls who get this far: You are the chosen ones,
-* the valiant knights of programming who toil away, without rest,
-* fixing our most awful code. To you, true saviors, kings of men,
-* I say this: never gonna give you up, never gonna let you down,
-* never gonna run around and desert you. Never gonna make you cry,
-* never gonna say goodbye. Never gonna tell a lie and hurt you.
-*/
-/*
-Orbital RP System
-A Star Trek Roleplay Ssystem for the Virtual Metavserse
-    Copyright (C) 2018  Orbit Technologies
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 <?php
 include"config.php";
 $uuid = $_POST['uuid'];

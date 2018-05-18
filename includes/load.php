@@ -1,5 +1,7 @@
 
 <?php
+include"config.php";
+global $db;
 include"includes/functions.php";
 /// Database Start
 require"includes/class.database.php";

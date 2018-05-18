@@ -4,7 +4,7 @@ include( "config.php" );
 
 mysqli_set_charset( $db,"utf8" );
 //	ini_set('default_charset', 'UTF-8');
-$uuid = $_POST['uuid'];
+$uuid = $_REQUEST['uuid'];
 
 $error = "\n\nFailed to update Group Tag.\nContact SS Pathfinder IT with the provided Error Message\n";
 
