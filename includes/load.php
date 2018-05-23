@@ -1,32 +1,34 @@
-
 <?php
-include"config.php";
-global $db;
-include"includes/functions.php";
-/// Database Start
-require"includes/class.database.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/config.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/class.database.php";
 $database = Database::getInstance();
 $db = $database->getConnection(); 
+
 //// Session
-require"includes/class.session.php";
+require $_SERVER['DOCUMENT_ROOT']. "/includes/class.session.php";
 $session = new Session;
 $session->make_shit();
 
 
-require"includes/class.staff.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/class.staff.php";
 $staff = new Staff;
 
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/class.courses.php";
+$courses = new Courses;
 
 
-include"includes/class.profile.php";
-
-include"includes/class.smartbots.php";
-
-include"includes/permissions.php";
-include"includes/header.php";
-include"includes/sidebar.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/class.grades.php";
+$grades = new Grades;
 
 
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/class.data.php";
+$data = new Data;
 
+
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/class.staff-list.php";
+$staff_list = new Staff_Directory;
+
+
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/header.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/sidebar.php";
 ?>
-

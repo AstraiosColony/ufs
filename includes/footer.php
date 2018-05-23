@@ -1,34 +1,34 @@
+</div>
+    <!-- /#wrapper -->
 
-<div class="copy">
-            <p> &copy; 2018 Orbit Technologies. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>	    </div>
-		</div>
-		</div>
-		<div class="clearfix"> </div>
-       </div>
+    <!-- jQuery -->
+    <script src="resources/vendor/jquery/jquery.min.js"></script>
 
-<?php
-if($page_type == "home"){
-include"includes/css/type.footer.home.php";
-}
-elseif($page_type == "profile"){
-include"includes/css/type.footer.profile.php";
-}
-else{
-include"includes/css/type.footer.standard.php";
-}
-?>
-   
+    <!-- Bootstrap Core JavaScript -->
+    <script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
 
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="resources/vendor/metisMenu/metisMenu.min.js"></script>
 
-<?php 
-if($_SESSION['level'] <= $dev_bar_level){
-echo"<div class='dev-footer'>";
-echo"<p>Developer Footer: Visible only to users with P-Level <=" . $dev_bar_level . "</p>";
-echo"</div>";
-}
-?>
+    <!-- DataTables JavaScript -->
+    <script src="resources/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="resources/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="resources/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="resources/vendor/raphael/raphael.min.js"></script>
+    <script src="resources/vendor/morrisjs/morris.min.js"></script>
+    <script src="resources/data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="resources/dist/js/sb-admin-2.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-course-listing').DataTable({
+            responsive: true
+        });
+    });
+    </script>
 </body>
+
 </html>
-
-
 

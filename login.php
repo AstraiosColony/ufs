@@ -1,22 +1,4 @@
-
 <?php
-/*
-* Copyright 2018 Orbital Group
-*
-*   Licensed under the Apache License, Version 2.0 (the "License");
-*   you may not use this file except in compliance with the License.
-*   You may obtain a copy of the License at
-*
-*       http://www.apache.org/licenses/LICENSE-2.0
-*
-*   Unless required by applicable law or agreed to in writing, software
-*   distributed under the License is distributed on an "AS IS" BASIS,
-*   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-*   See the License for the specific language governing permissions and
-*   limitations under the License.
-*
-*
-*/
 if($_GET["logout"] == "true"){
 // Unset all of the session variables
 $_SESSION = array();
@@ -25,7 +7,7 @@ $_SESSION = array();
 session_destroy();
  
 // Redirect to login page
-header("location: login"); // 
+header("location: login.php"); // 
 
 }
 /// Database Start
@@ -83,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             save the username to the session */
                             session_start();
                             $_SESSION['username'] = $username;      
-                            header("location: index");
+                            header("location: index.php");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = 'The password you entered was not valid.';
@@ -104,65 +86,85 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
 }
 ?>
- 
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>Login | Orbital</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href="resources/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<link href="resources/css/style.css" rel='stylesheet' type='text/css' />
-<link href="resources/css/font-awesome.css" rel="stylesheet"> 
-<script src="resources/js/jquery.min.js"> </script>
-<script src="resources/js/bootstrap.min.js"> </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login | Orbital </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="resources/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="resources/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
-	<div class="login">
-		<h1><a href="index">Orbital</a></h1>
-			<div class="login-bottom">
-			<h2>Login</h2>
-			<form method="POST">
-			<div class="col-md-6">
-				<div class="login-mail">
-					<input type="text" name="username" value="<?php echo $username; ?>">
-					<i class="fa fa-envelope"></i>
-				</div>
-				<div class="login-mail">
-					<input type="password" name="password" required="">
 
-					<i class="fa fa-lock"></i>
-				</div>
-				   <a class="news-letter " href="#">
-						 <label class="checkbox1"><input type="checkbox" name="checkbox"><i> </i>Remember Me</label>
-					   </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Sign In</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                <label>Username</label>
+                <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
+                <span class="help-block"><?php echo $username_err; ?></span>
+            </div>    
+            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control">
+                <span class="help-block"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login">
+            </div>
+        
+        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			
-			</div>
-			<div class="col-md-6 login-do">
-				<label class="hvr-shutter-in-horizontal login-sub">
-					<input type="submit" value="login">
-					</label>
-					<p>Don't Have a account?</p>
-				<a href="https://support.omega-grid.org" class="hvr-shutter-in-horizontal">Request a Account</a>
-			</div>
-			
-			<div class="clearfix"> </div>
-			</form>
-		</div>
-		</div>
-		<!---->
-<div class="copy-right">
-            <p> &copy; 2018 Orbital Roleplay System. All Rights Reserved</p>	    </div>  
-<!---->
-<!--scrolling js-->
-	<script src="resources/js/jquery.nicescroll.js"></script>
-	<script src="resources/js/scripts.js"></script>
-	<!--//scrolling js-->
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
 </body>
+
 </html>
-
-

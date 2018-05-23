@@ -1,37 +1,65 @@
-		    <div class="navbar-default sidebar" role="navigation">
+<div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
-				
-                    <li>
-                        <a href="index" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i><span class="nav-label">Dashboard</span> </a>
-                    </li>
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Academy<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+					<li>
+                                    <a href="modules/academy/">Academy Home</a>
+                                </li>
+
+                               
+                                <li>
+                                    <a href="modules/academy/courses.php">Courses</a>
+                                </li>
 <li>
-
-                                            <a href="staff" class=" hvr-bounce-to-right"><i class="fa fa-users nav_icon "></i><span class="nav-label">Staff</span> </a>
-                    </li>
-
-
-			<li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i> <span class="nav-label">Timeclock/Rank</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="most-active" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i>Most Active Users</a></li>
-<li><a href="ranks" class=" hvr-bounce-to-right"><i class="fa fa-dashboard nav_icon "></i>Rank Marks</a></li>
-
-                                                    </ul>
-                    </li>
+                                    <a href="modules/academy/grades.php">Grades</a>
+                                </li>
 <li>
-                        <a href="blog" class=" hvr-bounce-to-right"><i class="fa fa-rss nav_icon "></i><span class="nav-label">Blog</span> </a>
-                    </li>
+                                    <a href="modules/academy/records.php">Records</a>
+                                </li>
 
 
-                 
-                    <li>
-                        <a href="changelog" class=" hvr-bounce-to-right"><i class="fa fa-clipboard nav_icon"></i><span class="nav-label">Changelog</span> </a>
-                    </li>
 
-                </ul>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+<li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Personnel<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+					<li>
+                                    <a href="modules/personnel/">Personnel Home</a>
+                                </li>
+
+                                <li>
+                                    <a href="modules/personnel/directory.php">Staff Directory</a>
+                                </li>
+                                <li>
+                                    <a href="modules/personnel/ranks.php">Ranks</a>
+                                </li>
+
+
+
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                                            </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
             </div>
-			</div>
+            <!-- /.navbar-static-side -->
         </nav>
-
-
