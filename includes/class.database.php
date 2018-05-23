@@ -10,9 +10,9 @@
 class Database {
 	private $_connection;
 	private static $_instance; //The single instance
-	private $_host = "localhost";
-	private $_username = "root";
-	private $_password = "65%tWb19s7Zp";
+	private $_host = ""; /// The hostname, usually "localhost" will work 
+	private $_username = ""; /// Don't Use the Root User This is Bad Practice
+	private $_password = ""; /// Example Password
 	private $_database = "orbital";
 	/*
 	Get an instance of the Database
