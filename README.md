@@ -1,2 +1,2 @@
 # orbital
-A Roleplay System for OpenSimulator and Secondlife
+A Roleplay System for OpenSimulator
