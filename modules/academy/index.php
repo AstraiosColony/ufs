@@ -1,5 +1,6 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . "/includes/load.php";
+$include = $_SERVER['DOCUMENT_ROOT'] . "/app";
+require $include . "/includes/load.php";
 ?>
             
         <div id="page-wrapper">
@@ -545,5 +546,5 @@ require $_SERVER['DOCUMENT_ROOT'] . "/includes/load.php";
         <!-- /#page-wrapper -->
 
     <?php
-require $_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/app/includes/footer.php";
 ?>

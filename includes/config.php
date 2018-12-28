@@ -1,7 +1,7 @@
 <?php
 
-define("SITE_URL", "https://beta.omega-grid.org/");
-define("SITE_NAME", "SS Pathfinder | Orbital");
+define("SITE_URL", "https://nwamgroup.com/app/");
+define("SITE_NAME", "NWAM Group | Orbital");
 
 
 

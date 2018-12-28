@@ -1,6 +1,7 @@
 <?php
 $page_title = "Staff Directory ";
-require $_SERVER['DOCUMENT_ROOT'] . "/includes/load.php";
+$include = $_SERVER['DOCUMENT_ROOT'] . "/app";
+require $include . "/includes/load.php";
 ?>
 
         <!-- Page Content -->
@@ -26,7 +27,7 @@ require $_SERVER['DOCUMENT_ROOT'] . "/includes/load.php";
 
 
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php";
+require $include . "/includes/footer.php";
 ?>
 
 

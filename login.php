@@ -8,14 +8,11 @@ session_destroy();
  
 // Redirect to login page
 header("location: login.php"); // 
-
 }
 /// Database Start
 require"includes/class.database.php";
 $database = Database::getInstance();
 $db = $database->getConnection(); 
-
-
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -86,7 +83,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,7 +132,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <label>Username</label>
                 <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
                 <span class="help-block"><?php echo $username_err; ?></span>
-            </div>    
+            </div> 
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control">
@@ -145,7 +141,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
-        
         </form>
                     </div>
                 </div>

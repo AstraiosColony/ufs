@@ -1,13 +1,12 @@
-
 <?php
 
 /**
-   * Session
-   * 
-   * 
-   * @package    Orbital
-   * @author     Hollow Omnicron <hollow@omega-grid.org>
-   */
+ * Session
+ * 
+ * 
+ * @package    Orbital
+ * @author     Hollow Omnicron <hollow@omega-grid.org>
+ */
 
 class Session
 {
@@ -24,21 +23,18 @@ class Session
         session_start();
     }
     public function end_shit()
-	{
-	// Unset all of the session variables
-$_SESSION = array();
- 
-// Destroy the session.
-session_destroy();
- 
-// Redirect to login page
-header("location: login"); // 
-}
+    {
+        
+        session_destroy();
+        
+        // Redirect to login page
+        header("location: login"); // 
+    }
     public function check_session()
     {
         
         // If session variable is not set it will redirect to login page
-        if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+        if (!isset($_SESSION['username'])) {
             header("location: login.php");
         }
         
@@ -60,16 +56,6 @@ header("location: login"); //
             $_SESSION['rank_id']      = $row['RankID'];
             $_SESSION['title_id']     = $row['TitleID'];
             $_SESSION['title_id']     = $row['TitleID'];
-            
-        }
-        
-        $oauth_sql = "SELECT * FROM oauth WHERE username='" . $_SESSION['username'] . "'";
-        
-        $oauth_info = mysqli_query($db, $oauth_sql);
-        
-        while ($row = mysqli_fetch_array($oauth_info)) {
-            
-            $_SESSION['bitly_oauth'] = $row['bitly'];
             
         }
         

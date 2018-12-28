@@ -5,13 +5,19 @@ header( 'Content-type: text/html; charset=utf-8' );
 include( "config.php" );
 mysqli_set_charset( $db,"utf8" );
 
-$DEBUG = $_REQUEST['debug'];
+
+If($_REQUEST['debug'] !== TRUE){
+  $DEBUG = FALSE;
+}
+else{
+  $DEBUG = TRUE;
+}
 $BRANCH = $_REQUEST['branch'];
 $uuid = $_REQUEST['uuid'];
 
 // SQL CommLink by Avatar UUID
 $Members = "SELECT a.UUID FROM accounts a WHERE a.active='1'";
-$RemoveComm = "DELETE FROM `Comms` WHERE (SELECT a.ID FROM `accounts` a WHERE a.UUID='$uuid')=`Comms`.accountid";
+$RemoveComm = "DELETE FROM `comms` WHERE (SELECT a.ID FROM `accounts` a WHERE a.UUID='$uuid')=`comms`.accountid";
 
 function GetMembers( $db,$sql )
 {

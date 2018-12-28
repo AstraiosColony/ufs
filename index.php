@@ -1,6 +1,18 @@
 <?php
+error_reporting( E_ALL );
+function customError($errno, $errstr,$error_file,$error_line) {
+      echo "<b>Error:</b> [$errno] $errstr - $error_file:$error_line";
+      echo "<br />";
+      echo "Terminating PHP Script";
+      
+      die();
+   }
+
+//set error handler
+set_error_handler("customError", E_ALL);
+$include = $_SERVER['DOCUMENT_ROOT'] . "/app";
 $page_title = "Home";
-require $_SERVER['DOCUMENT_ROOT'] . "/includes/load.php";
+require $include . "/includes/load.php";
 ?>
             
         <div id="page-wrapper">
@@ -546,5 +558,5 @@ require $_SERVER['DOCUMENT_ROOT'] . "/includes/load.php";
         <!-- /#page-wrapper -->
 
     <?php
-require"includes/footer.php";
+require $include .  "/includes/footer.php";
 ?>

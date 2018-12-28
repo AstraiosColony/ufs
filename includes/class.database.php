@@ -12,8 +12,8 @@ class Database {
 	private static $_instance; //The single instance
 	private $_host = ""; /// The hostname, usually "localhost" will work 
 	private $_username = ""; /// Don't Use the Root User This is Bad Practice
-	private $_password = ""; /// Example Password
-	private $_database = "orbital";
+	private $_password = "";/// Example Password
+	private $_database = "";
 	/*
 	Get an instance of the Database
 	@return Instance

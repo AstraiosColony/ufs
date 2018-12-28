@@ -3,7 +3,7 @@ include"config.php";
 $uuid = $_REQUEST['uuid'];
 $code = $_REQUEST['code'];
 
-$error = "\n\nPersonnel Authorization Error\nContact SS Pathfinder IT with the provided Error Message\n";
+$error = "\n\nPersonnel Authorization Error\nContact Neverworld Aviation IT with the provided Error Message\n";
 
 
 // SQL statments

@@ -1,5 +1,6 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . "/includes/load.php";
+$include = $_SERVER['DOCUMENT_ROOT'] . "/app";
+require $include . "/includes/load.php";
 ?>
 
         <!-- Page Content -->
@@ -59,5 +60,5 @@ mysqli_close(); //Make sure to close out the database connection
 
 
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php";
+require $include . "/includes/footer.php";
 ?>
