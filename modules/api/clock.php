@@ -4,11 +4,11 @@ include( "config.php" );
 $uuid = $_REQUEST['uuid'];
 $name = $_REQUEST['name'];
 
-$ERROR = "\n\nFailed to update Users Time Card.\nContact Captain Morketh Sorex Starfleet Delta IT Department with the provided Error Message\nFor bug Reports/Updates\nhttps://github.com/CollectiveIndustries/StarfleetDelta/issues";
+$ERROR = "\n\nFailed to update Users Time Card.\nContact Ensign Cody Cooper, SS Astraios Enginnering with the provided Error Message";
 
 // SQL statments
 // Insert UUID Username and Email address (AvatarName@Starfleet Delta.co)
-$NEW_AVY_SQL = "INSERT INTO `accounts` (`UUID`, `username`, `email`) VALUES ('$uuid', '$name', CONCAT(REPLACE('$name',' ',''),'@ss-pathfinder.tk'))";
+$NEW_AVY_SQL = "INSERT INTO `accounts` (`UUID`, `username`, `email`) VALUES ('$uuid', '$name', CONCAT(REPLACE('$name',' ',''),'@ufstarfleet.org'))";
 $SelectAV = "SELECT ID FROM `accounts` WHERE `UUID` = '$uuid'";
 $OnFileInsert = "SELECT `ClockUpdate`('$uuid') AS `status`"; //Run the Update function and return a status code
 
