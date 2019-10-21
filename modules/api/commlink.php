@@ -16,16 +16,16 @@ $DEBUG = $_POST['debug'];
 
 // SQL CommLink by Avatar UUID
 $AddComm = "CALL `UpdateCommLink`('$OwnerUUID', '$ObjectUUID', '$url')";
-$Comms = "SELECT IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `Comms` com JOIN `accounts` a ON a.ID = com.accountid ORDER BY `comid`";
-$CommLock = "SELECT r.rname, IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `accounts` a INNER JOIN `divisions` d ON a.`DivID` = d.`did` INNER JOIN `Rank` r ON a.`RankID` = r.`RankID` INNER JOIN `Comms` com ON com.accountid=a.ID WHERE a.active = '1' AND IFNULL(d.alias,d.dname) = '$div_lookup'";
-$SenderName = "SELECT `r`.`rname` AS `rname`, IFNULL(`a`.`DisplayName`,`a`.`username`) AS `name` FROM `accounts` `a` JOIN `Rank` `r` ON `a`.`RankID` = `r`.`RankID` WHERE a.UUID='$OwnerUUID'";
+$Comms = "SELECT IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `comms` com JOIN `accounts` a ON a.ID = com.accountid ORDER BY `comid`";
+$CommLock = "SELECT r.rname, IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `accounts` a INNER JOIN `divisions` d ON a.`DivID` = d.`did` INNER JOIN `rank` r ON a.`RankID` = r.`RankID` INNER JOIN `comms` com ON com.accountid=a.ID WHERE a.active = '1' AND IFNULL(d.alias,d.dname) = '$div_lookup'";
+$SenderName = "SELECT `r`.`rname` AS `rname`, IFNULL(`a`.`DisplayName`,`a`.`username`) AS `name` FROM `accounts` `a` JOIN `rank` `r` ON `a`.`RankID` = `r`.`RankID` WHERE a.UUID='$OwnerUUID'";
 $IsComm = "SELECT `ID` FROM `accounts` WHERE `UUID`='$OwnerUUID'";
-$RemoveCommLink = "DELETE FROM `Comms` WHERE `ObjectUUID`='$ObjectUUID'";
+$RemoveCommLink = "DELETE FROM `comms` WHERE `ObjectUUID`='$ObjectUUID'";
 
-$CommitteeLocked = "SELECT IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `Comms` com JOIN `accounts` a ON a.ID = com.accountid JOIN `committee` c ON c.aid = a.ID ORDER BY `comid`";
-$DHLocked = "SELECT IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `Comms` com JOIN `accounts` a ON a.ID = com.accountid WHERE a.dh='1' ORDER BY `comid`";
-$AdminPerms = "SELECT IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `Comms` com JOIN `accounts` a ON a.ID = com.accountid WHERE a.db_privlage_level='10' ORDER BY `comid`";
-$OnComm = "SELECT `r`.`rname` AS `rname`, IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `Comms` com JOIN `accounts` a ON a.ID = com.accountid JOIN `Rank` `r` ON `a`.`RankID` = `r`.`RankID` ORDER BY `comid`";
+$CommitteeLocked = "SELECT IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `comms` com JOIN `accounts` a ON a.ID = com.accountid JOIN `committee` c ON c.aid = a.ID ORDER BY `comid`";
+$DHLocked = "SELECT IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `comms` com JOIN `accounts` a ON a.ID = com.accountid WHERE a.dh='1' ORDER BY `comid`";
+$AdminPerms = "SELECT IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `comms` com JOIN `accounts` a ON a.ID = com.accountid WHERE a.db_privlage_level='10' ORDER BY `comid`";
+$OnComm = "SELECT `r`.`rname` AS `rname`, IFNULL(a.DisplayName, a.username) AS `name`, com.url FROM `comms` com JOIN `accounts` a ON a.ID = com.accountid JOIN `rank` `r` ON `a`.`RankID` = `r`.`RankID` ORDER BY `comid`";
 
 function UpdateCommLink( $db,$sql )
 {
