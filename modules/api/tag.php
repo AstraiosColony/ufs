@@ -14,8 +14,7 @@ $Rows  = mysqli_num_rows($query);
 if ($Rows == 0) // Is there a record already?
     {
     //No record on file they must be a civilian\observer
-    echo "<255,255,255>:═══════\nCivilian\nUFS"; //\nBUG ".$Rows. "\nuuid = ".$uuid;
-    //echo "<255,255,255>:".$Tag;
+    echo "<255,255,255>:═══════\nCivilian\nUFS";
 } elseif ($Rows == 1) {
     $list     = mysqli_fetch_array($query);
     $name     = $list['name'];
