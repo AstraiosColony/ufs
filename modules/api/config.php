@@ -1,6 +1,6 @@
 <?php
 
-require $_SERVER['DOCUMENT_ROOT'] . "/app/includes/class.database.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/class.database.php";
 
 
 $database = Database::getInstance();
