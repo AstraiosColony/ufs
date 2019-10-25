@@ -29,7 +29,7 @@ if ($Rows == 0) // Is there a record already?
     } else {
         // In the line by line examples, a * represents new line
         //   echo "<".$colorX.",".$colorY.",".$colorZ.">:".$logo."\n".$rank."\n".$name."\n".$tag."\n".$station // This shows Logo*Rank*Name*Position*Current Station
-        echo "<" . $colorX . "," . $colorY . "," . $colorZ . ">:" . $name . "\n" . $rank . "|" . $division . "\n" . $tag . "\n" . $station;
+        echo "<" . $colorX . "," . $colorY . "," . $colorZ . ">:" . $name . "\n" . $rank . "\n" . $division . "\n" . $tag . "\n" . $station;
     }
 }
 ?>
