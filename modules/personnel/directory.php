@@ -1,6 +1,6 @@
 <?php
 $page_title = "Staff Directory ";
-$include = $_SERVER['DOCUMENT_ROOT'] . "/app";
+$include = $_SERVER['DOCUMENT_ROOT'] . "";
 require $include . "/includes/load.php";
 ?>
 
