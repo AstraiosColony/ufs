@@ -13,13 +13,13 @@
             <!-- /input-group -->
          </li>
          <li>
-            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+            <a href="/index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
          </li>
          <li>
             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Personnel<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
                <li>
-                  <a href="modules/personnel/">Personnel Home</a>
+                  <a href="modules/personnel/index.php">Personnel Home</a>
                </li>
                <li>
                   <a href="modules/personnel/directory.php">Staff Directory</a>
