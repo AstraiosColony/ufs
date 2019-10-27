@@ -10,7 +10,7 @@ function customError($errno, $errstr,$error_file,$error_line) {
 
 //set error handler
 set_error_handler("customError", E_ALL);
-$include = $_SERVER['DOCUMENT_ROOT'] . "/app";
+$include = $_SERVER['DOCUMENT_ROOT'] . "";
 $page_title = "Home";
 require $include . "/includes/load.php";
 ?>
