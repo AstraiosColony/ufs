@@ -10,7 +10,7 @@ $error = "\n\nFailed to update Group Tag.\nContact Astraios Colony Engineering w
 
 if($info = "division")
 {
-$sql = "UPDATE `accounts` SET `DivID` = '" . $value . "' WHERE `accounts`.`UUID` = ". $uuid . ";";
+$sql = "UPDATE `accounts` SET `DivID` = '" . $value . "' WHERE `accounts`.`UUID` = '". $uuid . "';";
 
 
 }
