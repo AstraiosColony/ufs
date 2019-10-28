@@ -14,6 +14,14 @@ $sql = "UPDATE `accounts` SET `DivID` = '" . $value . "' WHERE `accounts`.`UUID`
 
 
 }
+else if($info = "rank")
+{
+$sql = "UPDATE `accounts` SET `RankID` = '" . $value . "' WHERE `accounts`.`UUID` = '". $uuid . "';";
+
+
+} else {
+   echo "Failed to update, please Register first";
+}
 
 if (mysqli_query($db, $sql)) {
     echo "Record updated successfully";
