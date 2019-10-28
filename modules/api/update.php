@@ -18,7 +18,7 @@ $sql = "UPDATE `accounts` SET `DivID` = '" . $value . "' WHERE `accounts`.`UUID`
 if (mysqli_query($db, $sql)) {
     echo "Record updated successfully";
 } else {
-    echo "Error updating record: " . mysqli_error($conn);
+    echo "Error updating record: " . mysqli_error($db);
 }
 
 
