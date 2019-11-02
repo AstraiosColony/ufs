@@ -1,6 +1,9 @@
 <?php
 // UPDATE `visitors` SET `count` = '13' WHERE `visitors`.`id` = 12;
 // Configuration settings
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 header( 'Content-type: text/html; charset=utf-8' );
 require( "config.php" );
 
