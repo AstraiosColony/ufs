@@ -15,15 +15,13 @@ $result = mysqli_query( $db,$findit );
 $isRecord =  mysqli_num_rows( $result );
    $add = "INSERT INTO `visitors` (, `name`, `count`) VALUES ('" . $region . "','" . $count . "')";
 if ( $isRecord == 0 ) // Is there a record already?
-{
-
-   
-   mysqli_query( $db,$add );
+{  
+   mysqli_query($db,$add);
 }
-else( $isRecord == 1 )
+else( $isRecord == 1)
 {
   
-   mysqli_query( $db,$update );
+   mysqli_query($db,$update);
 }
 
 echo $findit;
