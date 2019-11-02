@@ -12,14 +12,23 @@ $count = $_REQUEST['count'];
 // SQL statments
 $findit = "SELECT * FROM `visitors` WHERE `name` LIKE '" . $region . "'";
 $result = mysqli_query( $db,$findit );
+ $update = "UPDATE `visitors` SET `count` = '" . $count . "' WHERE `visitors`.`region ` = '". $region . "'";
 $isRecord =  mysqli_num_rows( $result );
+   $add = "INSERT INTO `visitors` (, `name`, `count`) VALUES ('" . $region . "','" . $count . "')";
 if ( $isRecord == 0 ) // Is there a record already?
 {
-   $add = "INSERT INTO `visitors` (, `name`, `count`) VALUES ('" . $region . "','" . $count . "');";
+
+   
    mysqli_query( $db,$add );
 }
 else( $isRecord == 1 )
 {
-    $update = "UPDATE `visitors` SET `count` = '" . $count . "' WHERE `visitors`.`region ` = '". $region . "';";
+  
    mysqli_query( $db,$update );
 }
+
+echo $findit;
+echo "\n";
+echo $update;
+echo "\n";
+echo $add;
